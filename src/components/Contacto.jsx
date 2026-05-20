@@ -95,31 +95,31 @@ function Contacto() {
                 Envíanos un mensaje
               </h3>
 
+              
               <form
-              <form
-              name="contacto-chrisyur"
-              method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              action="/"
-              onSubmit={(e) => {
-                e.preventDefault();
+                name="contacto-chrisyur"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                action="/"
+                onSubmit={(e) => {
+                  e.preventDefault();
 
-                const form = e.target;
-                const data = new FormData(form);
+                  const form = e.target;
+                  const data = new FormData(form);
 
-                fetch("/", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                  body: new URLSearchParams(data).toString(),
-                })
-                .then(() => {
-                  alert("Mensaje enviado correctamente");
-                  form.reset();
-                })
-                .catch(() => alert("Ocurrió un error al enviar el mensaje"));
-              }}
-              > 
+                  fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(data).toString(),
+                  })
+                    .then(() => {
+                      alert("Mensaje enviado correctamente");
+                      form.reset();
+                    })
+                    .catch(() => alert("Ocurrió un error al enviar el mensaje"));
+                  }}
+                > 
                 
 
                 {/* NECESARIO PARA NETLIFY */}
