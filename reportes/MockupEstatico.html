@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockup CHRISYUR</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#F8F4EA;
+      color:#222;
+    }
+
+    header{
+      background:#0B132B;
+      color:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 60px;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:bold;
+      font-size:24px;
+      letter-spacing:3px;
+    }
+
+    .logo-circle{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#D4AF37;
+      color:#0B132B;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-weight:bold;
+      font-size:22px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:18px;
+      font-weight:bold;
+    }
+
+    nav a:hover{
+      color:#D4AF37;
+    }
+
+    .hero{
+      min-height:85vh;
+      background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1441986300917-64674bd600d8");
+      background-size:cover;
+      background-position:center;
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:30px;
+    }
+
+    .hero-logo{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      background:#D4AF37;
+      color:#0B132B;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin:0 auto 25px;
+      font-size:55px;
+      font-weight:bold;
+      box-shadow:0 0 25px rgba(212,175,55,.6);
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin:0;
+      letter-spacing:10px;
+    }
+
+    .hero p{
+      font-size:22px;
+      margin:15px 0 30px;
+    }
+
+    .btn{
+      background:#D4AF37;
+      color:#0B132B;
+      padding:14px 35px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+      display:inline-block;
+    }
+
+    section{
+      padding:70px 10%;
+    }
+
+    h2{
+      text-align:center;
+      color:#0B132B;
+      font-size:36px;
+      margin-bottom:35px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:18px;
+      text-align:center;
+      box-shadow:0 8px 22px rgba(0,0,0,.08);
+    }
+
+    .card h3{
+      color:#0B132B;
+    }
+
+    .icono{
+      font-size:40px;
+      color:#D4AF37;
+    }
+
+    .bloque-oscuro{
+      background:#0B132B;
+      color:white;
+      border-radius:18px;
+      padding:35px;
+    }
+
+    .bloque-oscuro h3{
+      color:#D4AF37;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      background:white;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 8px 22px rgba(0,0,0,.08);
+      margin-top:35px;
+    }
+
+    th{
+      background:#0B132B;
+      color:white;
+      padding:15px;
+    }
+
+    td{
+      padding:15px;
+      border-bottom:1px solid #ddd;
+      text-align:center;
+    }
+
+    .galeria{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .galeria img{
+      width:100%;
+      height:230px;
+      object-fit:cover;
+      border-radius:16px;
+    }
+
+    .video{
+      margin-top:35px;
+      background:#111;
+      color:white;
+      height:300px;
+      border-radius:18px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:24px;
+    }
+
+    .contacto{
+      display:grid;
+      grid-template-columns:1fr 1.5fr;
+      gap:30px;
+    }
+
+    .contacto-info{
+      background:#0B132B;
+      color:white;
+      padding:35px;
+      border-radius:18px;
+    }
+
+    .contacto-info h3{
+      color:#D4AF37;
+    }
+
+    .contacto-logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+      margin-bottom:25px;
+    }
+
+    .contacto-logo .logo-circle{
+      width:70px;
+      height:70px;
+    }
+
+    form{
+      background:white;
+      padding:35px;
+      border-radius:18px;
+      box-shadow:0 8px 22px rgba(0,0,0,.08);
+    }
+
+    input, select, textarea{
+      width:100%;
+      padding:14px;
+      margin-bottom:16px;
+      border:1px solid #ccc;
+      border-radius:10px;
+      box-sizing:border-box;
+    }
+
+    textarea{
+      height:120px;
+    }
+
+    button{
+      background:#D4AF37;
+      color:#0B132B;
+      border:none;
+      padding:14px 30px;
+      border-radius:10px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    .redes{
+      background:#111;
+      color:white;
+      text-align:center;
+    }
+
+    .redes h2{
+      color:white;
+    }
+
+    .iconos-redes{
+      display:flex;
+      justify-content:center;
+      gap:30px;
+      flex-wrap:wrap;
+    }
+
+    .red-social{
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      border:2px solid #D4AF37;
+      color:#D4AF37;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:38px;
+      font-weight:bold;
+      background:black;
+    }
+
+    .privacidad p{
+      text-align:justify;
+      line-height:1.8;
+      background:white;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 8px 22px rgba(0,0,0,.08);
+    }
+
+    footer{
+      background:#0B132B;
+      color:white;
+      text-align:center;
+      padding:25px;
+    }
+
+    @media(max-width:900px){
+      header{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+      }
+
+      nav{
+        text-align:center;
+      }
+
+      nav a{
+        display:inline-block;
+        margin:8px;
+      }
+
+      .cards,
+      .galeria,
+      .contacto{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-circle">CY</div>
+      CHRISYUR
+    </div>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div>
+      <div class="hero-logo">CY</div>
+      <h1>CHRISYUR</h1>
+      <p>Moda, estilo y calidad desde El Rosal, Jilotepec</p>
+      <a href="#contacto" class="btn">Contáctanos</a>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <h2>Sobre nosotros</h2>
+    <p style="text-align:center; max-width:900px; margin:auto;">
+      CHRISYUR es una tienda de ropa ubicada en El Rosal, Jilotepec,
+      dedicada a ofrecer prendas modernas, cómodas y accesibles.
+    </p>
+
+    <div class="cards" style="margin-top:35px;">
+      <div class="card">
+        <div class="icono">★</div>
+        <h3>Calidad</h3>
+        <p>Prendas seleccionadas con cuidado.</p>
+      </div>
+
+      <div class="card">
+        <div class="icono">♥</div>
+        <h3>Confianza</h3>
+        <p>Atención amable y responsable.</p>
+      </div>
+
+      <div class="card">
+        <div class="icono">✦</div>
+        <h3>Estilo</h3>
+        <p>Diseños actuales para diferentes gustos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Misión y visión</h2>
+
+    <div class="cards">
+      <div class="bloque-oscuro">
+        <h3>Misión</h3>
+        <p>Ofrecer ropa de calidad, cómoda y moderna para nuestros clientes.</p>
+      </div>
+
+      <div class="bloque-oscuro">
+        <h3>Visión</h3>
+        <p>Ser una tienda reconocida por su estilo, servicio y compromiso.</p>
+      </div>
+
+      <div class="bloque-oscuro">
+        <h3>Objetivo</h3>
+        <p>Brindar una experiencia de compra agradable y confiable.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="productos">
+    <h2>Servicios y productos</h2>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icono">🛍</div>
+        <h3>Ropa casual</h3>
+      </div>
+
+      <div class="card">
+        <div class="icono">👗</div>
+        <h3>Moda juvenil</h3>
+      </div>
+
+      <div class="card">
+        <div class="icono">🎁</div>
+        <h3>Accesorios</h3>
+      </div>
+    </div>
+
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+      </tr>
+      <tr>
+        <td>Blusa</td>
+        <td>Modelo casual</td>
+        <td>$180</td>
+      </tr>
+      <tr>
+        <td>Pantalón</td>
+        <td>Mezclilla o vestir</td>
+        <td>$350</td>
+      </tr>
+      <tr>
+        <td>Vestido</td>
+        <td>Diseño juvenil</td>
+        <td>$420</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Clientes y aliados estratégicos</h2>
+
+    <div class="cards">
+      <div class="card">Proveedor Textil</div>
+      <div class="card">Clientes Locales</div>
+      <div class="card">Ventas por WhatsApp</div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería / Portafolio</h2>
+
+    <div class="galeria">
+      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8" alt="Tienda">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b" alt="Ropa">
+      <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c" alt="Moda">
+    </div>
+
+    <div class="video">
+      Espacio para video iframe
+    </div>
+
+    <div class="card" style="margin-top:25px;">
+      Audio promocional
+    </div>
+  </section>
+
+  <section>
+    <h2>Testimonios</h2>
+
+    <div class="cards">
+      <div class="card">“Excelente atención y ropa muy bonita.”</div>
+      <div class="card">“Me gustó la calidad y los precios.”</div>
+      <div class="card">“Siempre encuentro algo para regalar.”</div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+
+    <div class="contacto">
+      <div class="contacto-info">
+        <div class="contacto-logo">
+          <div class="logo-circle">CY</div>
+          <h3>CHRISYUR</h3>
+        </div>
+
+        <p>El Rosal, Jilotepec</p>
+        <p>WhatsApp: 55 5555 5555</p>
+        <p>Correo: contacto@chrisyur.com</p>
+        <p>Lunes a sábado · 10:00 a.m. - 7:00 p.m.</p>
+      </div>
+
+      <form>
+        <h3>Envíanos un mensaje</h3>
+        <input type="text" placeholder="Nombre completo">
+        <input type="email" placeholder="Correo electrónico">
+        <input type="tel" placeholder="Teléfono">
+
+        <select>
+          <option>Producto de interés</option>
+          <option>Blusas</option>
+          <option>Pantalones</option>
+          <option>Vestidos</option>
+          <option>Accesorios</option>
+        </select>
+
+        <textarea placeholder="Mensaje"></textarea>
+        <button>Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="redes">
+    <h2>Redes sociales</h2>
+
+    <div class="iconos-redes">
+      <div class="red-social">f</div>
+      <div class="red-social">◎</div>
+      <div class="red-social">☎</div>
+    </div>
+  </section>
+
+  <section class="privacidad">
+    <h2>Aviso de privacidad</h2>
+
+    <p>
+      CHRISYUR protege los datos personales proporcionados por sus clientes.
+      La información recibida mediante el formulario de contacto será utilizada
+      únicamente para brindar atención, responder solicitudes y dar seguimiento
+      a productos o servicios de interés. Este sitio web tiene fines informativos
+      y los precios, productos o promociones pueden cambiar sin previo aviso.
+    </p>
+  </section>
+
+  <footer>
+    © 2026 CHRISYUR - El Rosal, Jilotepec
+  </footer>
+
+</body>
+</html>

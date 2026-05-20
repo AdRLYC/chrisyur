@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe CHRISYUR</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    header, section, footer {
+      border: 2px dashed #555;
+      margin: 20px;
+      padding: 25px;
+      background: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      width: 120px;
+      height: 60px;
+      border: 2px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #333;
+      text-decoration: none;
+      border-bottom: 1px solid #333;
+    }
+
+    .hero {
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .placeholder {
+      border: 2px solid #999;
+      background: #eaeaea;
+      padding: 30px;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      border: 2px solid #777;
+      padding: 20px;
+      text-align: center;
+      background: #fafafa;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 10px;
+      text-align: center;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input, select, textarea, button {
+      padding: 12px;
+      border: 1px solid #777;
+    }
+
+    button {
+      background: #222;
+      color: white;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">LOGO CY</div>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="placeholder">Imagen principal / Hero</div>
+    <h1>CHRISYUR</h1>
+    <p>Slogan de la tienda de ropa</p>
+    <button>Botón de contacto</button>
+  </section>
+
+  <section id="nosotros">
+    <h2>Sobre nosotros</h2>
+    <div class="placeholder">Texto de historia de la empresa</div>
+
+    <div class="grid">
+      <div class="card">Valor 1</div>
+      <div class="card">Valor 2</div>
+      <div class="card">Valor 3</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Misión y visión</h2>
+
+    <div class="grid">
+      <div class="card">Misión</div>
+      <div class="card">Visión</div>
+      <div class="card">Objetivo</div>
+    </div>
+  </section>
+
+  <section id="productos">
+    <h2>Servicios / Productos</h2>
+
+    <div class="grid">
+      <div class="card">Ropa casual</div>
+      <div class="card">Moda juvenil</div>
+      <div class="card">Accesorios</div>
+    </div>
+
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+      </tr>
+      <tr>
+        <td>Blusa</td>
+        <td>Descripción</td>
+        <td>$</td>
+      </tr>
+      <tr>
+        <td>Pantalón</td>
+        <td>Descripción</td>
+        <td>$</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Clientes / Aliados</h2>
+
+    <div class="grid">
+      <div class="card">Logo aliado 1</div>
+      <div class="card">Logo aliado 2</div>
+      <div class="card">Logo aliado 3</div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería / Portafolio</h2>
+
+    <div class="grid">
+      <div class="placeholder">Imagen 1</div>
+      <div class="placeholder">Imagen 2</div>
+      <div class="placeholder">Imagen 3</div>
+    </div>
+
+    <div class="placeholder">Video incrustado / iframe</div>
+    <div class="placeholder">Audio promocional</div>
+  </section>
+
+  <section>
+    <h2>Testimonios</h2>
+
+    <div class="grid">
+      <div class="card">Testimonio 1</div>
+      <div class="card">Testimonio 2</div>
+      <div class="card">Testimonio 3</div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Formulario de contacto</h2>
+
+    <form>
+      <input type="text" placeholder="Nombre completo">
+      <input type="email" placeholder="Correo electrónico">
+      <input type="tel" placeholder="Teléfono">
+
+      <select>
+        <option>Producto de interés</option>
+      </select>
+
+      <textarea placeholder="Mensaje"></textarea>
+
+      <button>Enviar mensaje</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Redes sociales</h2>
+
+    <div class="grid">
+      <div class="card">Facebook</div>
+      <div class="card">Instagram</div>
+      <div class="card">WhatsApp</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Aviso de privacidad</h2>
+    <div class="placeholder">
+      Texto legal / términos y condiciones
+    </div>
+  </section>
+
+  <footer>
+    <p>Footer / Derechos reservados / CHRISYUR</p>
+  </footer>
+
+</body>
+</html>
