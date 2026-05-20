@@ -99,6 +99,7 @@ function Contacto() {
                 name="contacto"
                 method="POST"
                 data-netlify="true"
+                data-netlify-honeypot="bot-field"
                 action="/"
               >
 
